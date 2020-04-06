@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-		if(password.equalsIgnoreCase("servlet"))
+		if(password.equals("servlet") && username.equals("user"))
 		{  
 			out.print("Success!!");  
 			RequestDispatcher rd=request.getRequestDispatcher("/login.html");  
