@@ -1,0 +1,27 @@
+package com.cg.iter.dao;
+
+import java.sql.*;
+import java.util.*;
+
+import com.cg.iter.model.TrainingProgram;
+import com.cg.iter.util.Database;
+
+public class TrainingProgramDao {
+
+	private Connection connection;
+	 
+    public TrainingProgramDao()
+    {
+        connection = Database.getConnection();
+    }
+    public List<TrainingProgram> getAllTrainingPrograms(){
+    	List<TrainingProgram> trainingPrograms = new ArrayList<TrainingProgram>();
+    	try {
+    		Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery("select * from training");
+    	}
+    	catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

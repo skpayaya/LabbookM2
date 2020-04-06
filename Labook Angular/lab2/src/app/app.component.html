@@ -1,0 +1,83 @@
+<div class="container">
+  <h1>Angular 2 Operation</h1>
+  <form>
+
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="number" class="form-control" id="id" name="id" [(ngModel)]="id">
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input type="number" class="form-control" id="salary" name="salary" [(ngModel)]="salary">
+    </div>
+    <div class="form-group">
+      <label for="department">Department</label>
+      <input type="text" class="form-control" id="department" name="department" [(ngModel)]="department">
+    </div>
+    <button type="submit" class="btn btn-outline-primary" (click)="addEmployee($event)">Add Employee</button>
+  </form>
+
+  {{id}}
+  {{name}}
+  {{salary}}
+  {{department}}
+
+  <table class="table">
+    <tr>
+      <th>
+        ID
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Salary
+      </th>
+      <th>
+        Department
+      </th>
+      <th colspan="2">
+        ACTION
+      </th>
+    </tr>
+
+    <tr *ngFor="let item of employees">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.salary}}</td>
+      <td>{{item.department}}</td>
+      <td><button (click)="onClickUpdate(item.id)">UPDATE</button></td>
+      <td><button (click)="onClickDelete(item.id)">DELETE</button></td>
+    </tr>
+
+  </table>
+</div>
+
+
+<div class="container" *ngIf="trueIfUpdating">
+  <h1>Angular 2 Operation</h1>
+  <form>
+
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="number" class="form-control" id="id" name="updateId" [(ngModel)]="updateId">
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="updateName" [(ngModel)]="updateName">
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input type="number" class="form-control" id="salary" name="updateSalary" [(ngModel)]="updateSalary">
+    </div>
+    <div class="form-group">
+      <label for="department">Department</label>
+      <input type="text" class="form-control" id="department" name="updateDepartment" [(ngModel)]="updateDepartment">
+    </div>
+    <button type="submit" class="btn btn-outline-primary" (click)="updateEmployee()">Update Employee</button>
+  </form>
+</div>

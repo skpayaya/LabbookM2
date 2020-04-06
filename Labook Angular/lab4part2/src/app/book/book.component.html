@@ -1,0 +1,23 @@
+<table border="1">
+
+    <tr>
+    <th>Book ID</th>
+    <th>Book Title</th>
+    <th>Book Year Of Publish</th>
+    <th>Book Author</th>
+    </tr>
+    <tr>
+    <td><input class="form-control" type="text" name="searchID" [(ngModel)]="searchID" (input)="searchById(searchID)"></td>
+    <td><input class="form-control" type="text" name="searchTitle" [(ngModel)]="searchTitle" (input)="searchByTitle(searchTitle)"></td>
+    <td><input class="form-control" type="text" name="searchYear" [(ngModel)]="searchYear" (input)="searchByYear(searchYear)"></td>
+    <td><input class="form-control" type="text" name="searchAuthor" [(ngModel)]="searchAuthor" (input)="searchByAuthor(searchAuthor)"></td>
+    </tr>
+  
+    <tr *ngFor="let book of bookSearchList">
+    <td>{{book.id}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.year}}</td>
+    <td>{{book.author}}</td>
+    </tr>
+    </table>
+  

@@ -1,0 +1,16 @@
+package com.cg.iter.dao;
+
+import java.sql.*;
+import java.util.*;
+
+import com.cg.iter.util.Database;
+
+public class TrainingProgramDao {
+
+	private Connection connection;
+	 
+    public TrainingProgramDao()
+    {
+        connection = Database.getConnection();
+    }
+}

@@ -1,0 +1,9 @@
+package com.cg.iter.service;
+
+import com.cg.iter.dao.TrainingProgramDao;
+
+public class TrainingProgramService {
+
+	TrainingProgramDao dao = new TrainingProgramDao();
+	
+}

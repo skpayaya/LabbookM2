@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="trainingList">Show All Trainings</a>
+
+<form method="get" action="trainingList">
+<input type="text" name="ac">
+<input>
+</form>
+</body>
+</html>

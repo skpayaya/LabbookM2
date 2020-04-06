@@ -1,0 +1,14 @@
+<table border="1">
+  <tr>
+    <th (click)="sortByID()">ID</th>
+    <th (click)="sortByName()">NAME</th>
+    <th (click)="sortBySal()">SALARY</th>
+    <th (click)="sortByDep()">DEPARTMENT</th>
+  </tr>
+  <tr *ngFor="let item of items">
+    <td>{{item.empId}}</td>
+    <td>{{item.empName}}</td> 
+    <td>{{item.empSal}}</td>
+    <td>{{item.empDep}}</td>
+  </tr>
+</table>
